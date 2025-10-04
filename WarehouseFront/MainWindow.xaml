@@ -1,0 +1,162 @@
+﻿<Window x:Class="WarehouseFront.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="🏢 Система управления складом" Height="700" Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Background="#f0f8ff">
+
+	<Window.Resources>
+		<Style x:Key="ModernButton" TargetType="Button">
+			<Setter Property="Background" Value="#4CAF50"/>
+			<Setter Property="Foreground" Value="White"/>
+			<Setter Property="FontSize" Value="14"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="BorderThickness" Value="0"/>
+			<Setter Property="Height" Value="35"/>
+			<Setter Property="Margin" Value="5"/>
+		</Style>
+
+		<Style x:Key="ModernTextBox" TargetType="TextBox">
+			<Setter Property="Height" Value="30"/>
+			<Setter Property="Margin" Value="0,5"/>
+			<Setter Property="FontSize" Value="12"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush" Value="#ccc"/>
+		</Style>
+
+		<Style x:Key="HeaderStyle" TargetType="TextBlock">
+			<Setter Property="FontSize" Value="13"/>
+			<Setter Property="FontWeight" Value="Bold"/>
+			<Setter Property="Foreground" Value="#333"/>
+			<Setter Property="Margin" Value="0,10,0,5"/>
+		</Style>
+	</Window.Resources>
+
+	<Grid>
+		<TabControl Background="White" BorderThickness="0" SelectionChanged="TabControl_SelectionChanged">
+
+			<TabItem Header="📦 ТОВАРЫ" FontSize="12" FontWeight="Bold">
+				<Grid Margin="10">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+
+					<TextBlock Grid.Row="0" Text="СПИСОК ТОВАРОВ НА СКЛАДЕ"
+                               FontSize="16" FontWeight="Bold" Foreground="#2E8B57"
+                               Margin="0,0,0,10"/>
+
+					<DataGrid Grid.Row="1" x:Name="ProductsGrid"
+                              AutoGenerateColumns="False"
+                              Background="White"
+                              IsReadOnly="True"
+                              BorderThickness="1"
+                              BorderBrush="#ddd"
+                              HeadersVisibility="Column"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False">
+						<DataGrid.Columns>
+							<DataGridTextColumn Header="Артикул" Binding="{Binding Артикул}" Width="120"/>
+							<DataGridTextColumn Header="Наименование" Binding="{Binding Наименование}" Width="250"/>
+							<DataGridTextColumn Header="Количество" Binding="{Binding Количество}" Width="100"/>
+							<DataGridTextColumn Header="Цена" Binding="{Binding Цена, StringFormat=C}" Width="100"/>
+							<DataGridTextColumn Header="Поставщик" Binding="{Binding Поставщик}" Width="250"/>
+							<DataGridTextColumn Header="Дата поставки" Binding="{Binding ДатаПоставки, StringFormat=dd.MM.yyyy}" Width="120"/>
+						</DataGrid.Columns>
+					</DataGrid>
+				</Grid>
+			</TabItem>
+
+			<TabItem Header="⬇️ ПРИЕМКА ТОВАРА" FontSize="12" FontWeight="Bold">
+				<ScrollViewer VerticalScrollBarVisibility="Auto">
+					<StackPanel Margin="20" Width="400">
+						<TextBlock Text="ПРИЕМКА ТОВАРА НА СКЛАД"
+                                   FontSize="16" FontWeight="Bold"
+                                   Foreground="#2E8B57" Margin="0,0,0,20"/>
+
+						<TextBlock Text="Артикул (SKU)" Style="{StaticResource HeaderStyle}"/>
+						<TextBox x:Name="SkuBox" Style="{StaticResource ModernTextBox}"/>
+
+						<TextBlock Text="Название товара" Style="{StaticResource HeaderStyle}"/>
+						<TextBox x:Name="NameBox" Style="{StaticResource ModernTextBox}"/>
+
+						<TextBlock Text="Количество" Style="{StaticResource HeaderStyle}"/>
+						<TextBox x:Name="QuantityBox" Style="{StaticResource ModernTextBox}"/>
+
+						<TextBlock Text="Цена за единицу" Style="{StaticResource HeaderStyle}"/>
+						<TextBox x:Name="PriceBox" Style="{StaticResource ModernTextBox}"/>
+
+						<TextBlock Text="Поставщик" Style="{StaticResource HeaderStyle}"/>
+						<TextBox x:Name="SupplierBox" Style="{StaticResource ModernTextBox}"/>
+
+						<TextBlock Text="Дата поставки" Style="{StaticResource HeaderStyle}"/>
+						<DatePicker x:Name="DeliveryDate" Height="30" Margin="0,5"/>
+
+						<Button Content="✅ ПРИНЯТЬ ТОВАР" Click="ReceiveGoods_Click"
+                                Style="{StaticResource ModernButton}"
+                                Background="#2E8B57" Margin="0,20"/>
+					</StackPanel>
+				</ScrollViewer>
+			</TabItem>
+
+			<TabItem Header="🗑️ СПИСАНИЕ ТОВАРА" FontSize="12" FontWeight="Bold">
+				<ScrollViewer VerticalScrollBarVisibility="Auto">
+					<StackPanel Margin="20" Width="400">
+						<TextBlock Text="СПИСАНИЕ ТОВАРА СО СКЛАДА"
+                                   FontSize="16" FontWeight="Bold"
+                                   Foreground="#FF6B6B" Margin="0,0,0,20"/>
+
+						<TextBlock Text="Артикул (SKU)" Style="{StaticResource HeaderStyle}"/>
+						<TextBox x:Name="WriteOffSkuBox" Style="{StaticResource ModernTextBox}"/>
+
+						<TextBlock Text="Количество для списания" Style="{StaticResource HeaderStyle}"/>
+						<TextBox x:Name="WriteOffQuantityBox" Style="{StaticResource ModernTextBox}"/>
+
+						<TextBlock Text="Причина списания" Style="{StaticResource HeaderStyle}"/>
+						<TextBox x:Name="ReasonBox" Style="{StaticResource ModernTextBox}"/>
+
+						<TextBlock Text="Дата списания" Style="{StaticResource HeaderStyle}"/>
+						<DatePicker x:Name="WriteOffDate" Height="30" Margin="0,5"/>
+
+						<Button Content="❌ СПИСАТЬ ТОВАР" Click="WriteOffGoods_Click"
+                                Style="{StaticResource ModernButton}"
+                                Background="#FF6B6B" Margin="0,20"/>
+					</StackPanel>
+				</ScrollViewer>
+			</TabItem>
+
+			<TabItem Header="📋 ЖУРНАЛ ОПЕРАЦИЙ" FontSize="12" FontWeight="Bold">
+				<Grid Margin="10">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto"/>
+						<RowDefinition Height="*"/>
+					</Grid.RowDefinitions>
+
+					<TextBlock Grid.Row="0" Text="ИСТОРИЯ ОПЕРАЦИЙ НА СКЛАДЕ"
+                               FontSize="16" FontWeight="Bold" Foreground="#4682B4"
+                               Margin="0,0,0,10"/>
+
+					<DataGrid Grid.Row="1" x:Name="OperationsGrid"
+                              AutoGenerateColumns="False"
+                              Background="White"
+                              IsReadOnly="True"
+                              BorderThickness="1"
+                              BorderBrush="#ddd"
+                              HeadersVisibility="Column"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False">
+						<DataGrid.Columns>
+							<DataGridTextColumn Header="Артикул" Binding="{Binding Артикул}" Width="120"/>
+							<DataGridTextColumn Header="Количество" Binding="{Binding Количество}" Width="100"/>
+							<DataGridTextColumn Header="Цена" Binding="{Binding Цена, StringFormat=C}" Width="100"/>
+							<DataGridTextColumn Header="Описание" Binding="{Binding Описание}" Width="300"/>
+							<DataGridTextColumn Header="Дата операции" Binding="{Binding ДатаОперации, StringFormat=dd.MM.yyyy HH:mm}" Width="150"/>
+							<DataGridTextColumn Header="Тип операции" Binding="{Binding ТипОперации}" Width="120"/>
+						</DataGrid.Columns>
+					</DataGrid>
+				</Grid>
+			</TabItem>
+
+		</TabControl>
+	</Grid>
+</Window>
