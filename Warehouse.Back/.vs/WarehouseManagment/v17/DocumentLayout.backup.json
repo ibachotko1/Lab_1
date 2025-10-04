@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|c:\\users\\dmitriy\\source\\repos\\warehouse.back\\lab_2\\service\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|solutionrelative:lab_2\\service\\warehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|c:\\users\\dmitriy\\source\\repos\\warehouse.back\\lab_2\\interface\\iwarehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|solutionrelative:lab_2\\interface\\iwarehouseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|c:\\users\\dmitriy\\source\\repos\\warehouse.back\\lab_2\\repository\\warehouserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|solutionrelative:lab_2\\repository\\warehouserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|c:\\users\\dmitriy\\source\\repos\\warehouse.back\\lab_2\\interface\\iwarehouserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|solutionrelative:lab_2\\interface\\iwarehouserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|c:\\users\\dmitriy\\source\\repos\\warehouse.back\\lab_2\\models\\operationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|solutionrelative:lab_2\\models\\operationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|c:\\users\\dmitriy\\source\\repos\\warehouse.back\\lab_2\\models\\operationrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|solutionrelative:lab_2\\models\\operationrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|c:\\users\\dmitriy\\source\\repos\\warehouse.back\\lab_2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8435BC8B-60CA-4FEF-A944-B002DF757AA6}|Lab_2\\Warehouse.Back.csproj|solutionrelative:lab_2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WarehouseService.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Service\\WarehouseService.cs",
+              "RelativeDocumentMoniker": "Lab_2\\Service\\WarehouseService.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Service\\WarehouseService.cs",
+              "RelativeToolTip": "Lab_2\\Service\\WarehouseService.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAcwHwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T05:54:57.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IWarehouseService.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Interface\\IWarehouseService.cs",
+              "RelativeDocumentMoniker": "Lab_2\\Interface\\IWarehouseService.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Interface\\IWarehouseService.cs",
+              "RelativeToolTip": "Lab_2\\Interface\\IWarehouseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T05:54:31.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WarehouseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Repository\\WarehouseRepository.cs",
+              "RelativeDocumentMoniker": "Lab_2\\Repository\\WarehouseRepository.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Repository\\WarehouseRepository.cs",
+              "RelativeToolTip": "Lab_2\\Repository\\WarehouseRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T05:54:00.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IWarehouseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Interface\\IWarehouseRepository.cs",
+              "RelativeDocumentMoniker": "Lab_2\\Interface\\IWarehouseRepository.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Interface\\IWarehouseRepository.cs",
+              "RelativeToolTip": "Lab_2\\Interface\\IWarehouseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T05:52:53.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OperationType.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Models\\OperationType.cs",
+              "RelativeDocumentMoniker": "Lab_2\\Models\\OperationType.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Models\\OperationType.cs",
+              "RelativeToolTip": "Lab_2\\Models\\OperationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T05:52:18.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OperationRecord.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Models\\OperationRecord.cs",
+              "RelativeDocumentMoniker": "Lab_2\\Models\\OperationRecord.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Models\\OperationRecord.cs",
+              "RelativeToolTip": "Lab_2\\Models\\OperationRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T05:52:00.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Lab_2\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\Dmitriy\\source\\repos\\Warehouse.Back\\Lab_2\\Models\\Product.cs",
+              "RelativeToolTip": "Lab_2\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T05:51:39.765Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
