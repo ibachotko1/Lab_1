@@ -1,0 +1,61 @@
+﻿<Page x:Class="Warehouse.Front.Pages.ReceiveGoodsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Title="Приемка товара">
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <TextBlock Grid.ColumnSpan="2" FontSize="18" FontWeight="Bold" Text="Приемка товара" Margin="0 0 0 10"/>
+
+        <!-- SKU -->
+        <TextBlock Grid.Row="1" Text="SKU:" VerticalAlignment="Center" />
+        <TextBox x:Name="txtSku" Grid.Row="1" Grid.Column="1" Margin="6" />
+
+        <!-- Name -->
+        <TextBlock Grid.Row="2" Text="Название:" VerticalAlignment="Center" />
+        <TextBox x:Name="txtName" Grid.Row="2" Grid.Column="1" Margin="6" />
+
+        <!-- Quantity -->
+        <TextBlock Grid.Row="3" Text="Количество:" VerticalAlignment="Center" />
+        <TextBox x:Name="txtQuantity" Grid.Row="3" Grid.Column="1" Margin="6"
+                 PreviewTextInput="Integer_PreviewTextInput"
+                 ToolTip="Только целые положительные числа" />
+
+        <!-- Price per unit -->
+        <TextBlock Grid.Row="4" Text="Цена за ед.:" VerticalAlignment="Center" />
+        <TextBox x:Name="txtPrice" Grid.Row="4" Grid.Column="1" Margin="6"
+                 PreviewTextInput="Decimal_PreviewTextInput"
+                 ToolTip="Число. Разделитель — запятая или точка (в зависимости от культуры)" />
+
+        <!-- Supplier -->
+        <TextBlock Grid.Row="5" Text="Поставщик:" VerticalAlignment="Center" />
+        <TextBox x:Name="txtSupplier" Grid.Row="5" Grid.Column="1" Margin="6" />
+
+        <!-- Delivery date -->
+        <TextBlock Grid.Row="6" Text="Дата поставки:" VerticalAlignment="Center" />
+        <DatePicker x:Name="dpDeliveryDate" Grid.Row="6" Grid.Column="1" Margin="6" />
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,12,0,0">
+            <Button x:Name="btnAdd" Content="Добавить" Width="110" Click="BtnAdd_Click" Margin="0,0,8,0"/>
+            <Button x:Name="btnClear" Content="Очистить" Width="90" Click="BtnClear_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

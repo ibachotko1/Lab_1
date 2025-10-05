@@ -11,7 +11,7 @@ namespace Lab_2.Repository
     public class InMemoryWarehouseRepository : IWarehouseRepository
     {
         private readonly List<Product> _products = new List<Product>();
-        private readonly List<OperationRecord> _operations = new List<OperationRecord>()    
+        private readonly List<OperationRecord> _operations = new List<OperationRecord>();    
         private readonly object _lock = new object();
 
         public void AddProduct(Product product)

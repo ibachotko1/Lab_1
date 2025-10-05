@@ -1,0 +1,52 @@
+﻿<Page x:Class="Warehouse.Front.Pages.WriteOffPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="WriteOffPage"
+      Background="#FFF7F7F7"
+      FontFamily="Segoe UI"
+      FontSize="14">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Списание товара" 
+                   FontSize="22" 
+                   FontWeight="Bold"
+                   Foreground="#2C3E50"
+                   Margin="0,0,0,20"/>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Top" Margin="0,0,0,10">
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <TextBlock Text="Товар (SKU):" Width="130" VerticalAlignment="Center"/>
+                <ComboBox x:Name="SkuBox" Width="320" Height="28" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <TextBlock Text="Количество:" Width="130" VerticalAlignment="Center"/>
+                <TextBox x:Name="QuantityBox" Width="320" Height="28" 
+                         PreviewTextInput="QuantityBox_PreviewTextInput"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <TextBlock Text="Причина:" Width="130" VerticalAlignment="Center"/>
+                <TextBox x:Name="ReasonBox" Width="320" Height="28"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                <TextBlock Text="Дата списания:" Width="130" VerticalAlignment="Center"/>
+                <DatePicker x:Name="dpWriteOffDate" Width="320" Height="28"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button x:Name="BtnClear" Content="Очистить" Width="110" Click="BtnClear_Click" Margin="0,0,8,0"/>
+            <Button x:Name="BtnWriteOff" Content="Списать" Width="110" Background="#2ECC71" Foreground="White" Click="BtnWriteOff_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
