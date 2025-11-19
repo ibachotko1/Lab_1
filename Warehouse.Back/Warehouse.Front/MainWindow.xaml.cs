@@ -25,6 +25,10 @@ namespace Warehouse.Front
             MainFrame.Content = new ProductsPage();
         }
 
+        private void Help_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Content = new HelpPage();
+        }
         private void Products_Click(object sender, RoutedEventArgs e) => MainFrame.Content = new ProductsPage();
         private void Receive_Click(object sender, RoutedEventArgs e) => MainFrame.Content = new ReceiveGoodsPage();
         private void WriteOff_Click(object sender, RoutedEventArgs e) => MainFrame.Content = new WriteOffPage();

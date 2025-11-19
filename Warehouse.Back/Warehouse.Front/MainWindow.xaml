@@ -5,11 +5,12 @@
     <DockPanel>
         <!-- Верхняя панель -->
         <StackPanel Orientation="Horizontal" Background="#2C3E50" Height="50" DockPanel.Dock="Top">
-            <Button Content="Товары" Width="150" Margin="5" Click="Products_Click"/>
-            <Button Content="Приемка" Width="150" Margin="5" Click="Receive_Click"/>
-            <Button Content="Списание" Width="150" Margin="5" Click="WriteOff_Click"/>
-            <Button Content="Инвентаризация" Width="150" Margin="5" Click="Inventory_Click"/>
-            <Button Content="Операции" Width="150" Margin="5" Click="Operations_Click"/>
+            <Button Content="Товары" Width="120" Margin="5" Click="Products_Click"/>
+            <Button Content="Приемка" Width="120" Margin="5" Click="Receive_Click"/>
+            <Button Content="Списание" Width="120" Margin="5" Click="WriteOff_Click"/>
+            <Button Content="Инвентаризация" Width="120" Margin="5" Click="Inventory_Click"/>
+            <Button Content="Операции" Width="120" Margin="5" Click="Operations_Click"/>
+            <Button Content="Справка" Width="120" Margin="5" Click="Help_Click" Background="#3498DB"/>
         </StackPanel>
 
         <!-- Контент -->

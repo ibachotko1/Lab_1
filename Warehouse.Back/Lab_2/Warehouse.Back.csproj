@@ -44,10 +44,12 @@
     <Compile Include="Interface\IWarehouseRepository.cs" />
     <Compile Include="Interface\IWarehouseService.cs" />
     <Compile Include="Models\OperationRecord.cs" />
+    <Compile Include="Models\OperationResult.cs" />
     <Compile Include="Models\OperationType.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\WarehouseRepository.cs" />
+    <Compile Include="Service\HelpService.cs" />
     <Compile Include="Service\WarehouseService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

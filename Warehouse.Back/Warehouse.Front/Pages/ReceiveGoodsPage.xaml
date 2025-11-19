@@ -18,7 +18,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
         <!-- Заголовок -->
@@ -36,12 +38,14 @@
         <TextBlock Grid.Row="3" Text="Количество:" VerticalAlignment="Center" />
         <TextBox x:Name="txtQuantity" Grid.Row="3" Grid.Column="1" Margin="6"
                  PreviewTextInput="Integer_PreviewTextInput"
+                 DataObject.Pasting="Integer_Pasting"
                  ToolTip="Только целые положительные числа" />
 
         <!-- Price per unit -->
         <TextBlock Grid.Row="4" Text="Цена за ед.:" VerticalAlignment="Center" />
         <TextBox x:Name="txtPrice" Grid.Row="4" Grid.Column="1" Margin="6"
                  PreviewTextInput="Decimal_PreviewTextInput"
+                 DataObject.Pasting="Decimal_Pasting"
                  ToolTip="Число. Разделитель — запятая или точка (в зависимости от культуры)" />
 
         <!-- Supplier -->
@@ -57,5 +61,43 @@
             <Button x:Name="btnAdd" Content="Добавить" Width="110" Click="BtnAdd_Click" Margin="0,0,8,0"/>
             <Button x:Name="btnClear" Content="Очистить" Width="90" Click="BtnClear_Click"/>
         </StackPanel>
+
+        <!-- Панель постусловий -->
+        <Border x:Name="PostConditionsPanel" Grid.Row="8" Grid.ColumnSpan="2" 
+                Background="#F8F9FA" BorderBrush="#DEE2E6" BorderThickness="1" 
+                CornerRadius="4" Padding="8" Margin="0,12,0,0">
+            <StackPanel>
+                <TextBlock Text="Результат выполнения постусловий:" 
+                          FontWeight="Bold" Margin="0,0,0,8" 
+                          Foreground="#2C3E50"/>
+
+                <ItemsControl x:Name="PostConditionsList">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Background="White" BorderBrush="#E9ECEF" BorderThickness="1" 
+                                    CornerRadius="3" Padding="6" Margin="0,2">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding StatusSymbol}" 
+                                                   Foreground="{Binding StatusColor}"
+                                                   FontWeight="Bold" Width="20"/>
+                                        <TextBlock Text="{Binding StatusText}" 
+                                                   Foreground="{Binding StatusColor}"
+                                                   FontWeight="SemiBold" Margin="4,0,0,0"/>
+                                        <TextBlock Text="{Binding Description}" 
+                                                   Margin="8,0,0,0" TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding Details}" 
+                                               FontStyle="Italic" 
+                                               Margin="24,2,0,0"
+                                               Foreground="#6C757D"
+                                               TextWrapping="Wrap"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </Border>
     </Grid>
 </Page>
